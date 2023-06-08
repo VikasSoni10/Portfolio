@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import data from "../assets/data.json";
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Work = () => {
   return (
@@ -9,14 +9,24 @@ const Work = () => {
       <h2>WORK</h2>
       <section>
         <article>
-          <Carousel>
+          <Carousel
+            showArrows={false}
+            showStatus={false}
+            showThumbs={false}
+            showIndicators={false}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={2000}
+          >
             {data.projects.map((i) => (
-              <div key={i.title}>
+              <div key={i.title} className="workItem">
                 <img src={i.imgSrc} alt={i.title} />
                 <aside>
                   <h3>{i.title}</h3>
                   <p>{i.description}</p>
-                  <a target="blank" href={i.url}>View Demo</a>
+                  <a target="blank" href={i.url}>
+                    View Demo
+                  </a>
                 </aside>
               </div>
             ))}
