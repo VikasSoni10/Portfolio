@@ -3,10 +3,11 @@
 @import "statics";
 @import "animations";
 @import "header";
-@import 'home';
+@import "home";
 @import "work";
 @import "timeline";
 @import "services";
+@import "testimonial";
 
 * {
   margin: 0%;
@@ -16,16 +17,16 @@
   box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-body{
-    background-color: $color1;
-    overflow-x: hidden;
+body {
+  background-color: $color1;
+  overflow-x: hidden;
 }
 
-.disableBtn{
-    background-color: rgb(237, 237, 237);
-    cursor: not-allowed;
+.disableBtn {
+  background-color: rgb(237, 237, 237);
+  cursor: not-allowed;
 }

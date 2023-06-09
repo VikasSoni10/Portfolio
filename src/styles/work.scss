@@ -45,21 +45,20 @@
         align-items: center;
         justify-content: center;
 
-        >p{
-            letter-spacing: 3px;
-            line-height: 180%;
-            margin:2rem;
+        > p {
+          letter-spacing: 3px;
+          line-height: 180%;
+          margin: 2rem;
         }
-        >a{
-            background-color: $color3;
-            padding: 0.7rem 2rem;
-            margin: 2rem;
-            color: $color4;
-            transition: all 0.5s;
-            &:hover{
-                background-color: $color3_1;
-            }
-
+        > a {
+          background-color: $color3;
+          padding: 0.7rem 2rem;
+          margin: 2rem;
+          color: $color4;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color3_1;
+          }
         }
       }
     }

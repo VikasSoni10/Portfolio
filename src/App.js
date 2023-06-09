@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Work from "./components/Work";
 import Timeline from "./components/Timeline";
 import Services from "./components/Services";
+import Testimonial from "./components/Testimonial";
 
 
 
@@ -13,6 +14,7 @@ function App() {
   <Work />
   <Timeline />
   <Services />
+  <Testimonial />
   </>
 }
 
