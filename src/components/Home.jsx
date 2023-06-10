@@ -4,8 +4,7 @@ import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.png";
 
-const Home = () => {
-
+const Home = ({ ratio }) => {
   const clientCount = useRef(null);
   const projectCount = useRef(null);
 
@@ -32,17 +31,17 @@ const Home = () => {
     },
   };
 
-  const clientCountAnimation = ()=>{
-    animate(0,100, {
-      duration:1,
-      onUpdate:(v)=>(clientCount.current.textContent = v.toFixed())
+  const clientCountAnimation = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
     });
   };
 
-  const projectCountAnimation = ()=>{
-    animate(0,500, {
-      duration:1,
-      onUpdate:(v)=>(projectCount.current.textContent = v.toFixed())
+  const projectCountAnimation = () => {
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
     });
   };
 
@@ -73,14 +72,30 @@ const Home = () => {
           </div>
           <article>
             <p>
-              +<motion.span ref={clientCount} whileInView={clientCountAnimation}>100</motion.span>
+              +
+              {ratio < 2.1 && (
+                <motion.span
+                  ref={clientCount}
+                  whileInView={clientCountAnimation}
+                >
+                  100
+                </motion.span>
+              )}
             </p>
             <span>Clients Worldwide</span>
           </article>
           <aside>
             <article>
               <p>
-                +<motion.span ref={projectCount} whileInView={projectCountAnimation}>500</motion.span>
+                +
+                {ratio < 2.1 && (
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={projectCountAnimation}
+                  >
+                    500
+                  </motion.span>
+                )}
               </p>
               <span> Projects Done</span>
             </article>

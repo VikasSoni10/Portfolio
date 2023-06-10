@@ -1,6 +1,6 @@
 #home {
-  height: 90vh;
   width: 100%;
+  height: 90vh;
   display: flex;
   > section {
     width: 100%;
@@ -74,7 +74,7 @@
           }
         }
         article[data-special] {
-          width: 10.5rem;
+          width: 12rem;
         }
       }
     }
